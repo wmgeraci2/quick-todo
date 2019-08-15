@@ -8,13 +8,6 @@ import "./App.css";
 
 const { Header, Footer, Content } = Layout;
 
-
-
-
-
-
-
-
 class App extends Component {
   constructor(props) {
     super(props);
