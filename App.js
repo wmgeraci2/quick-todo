@@ -5,7 +5,6 @@ import { Layout, Input, Button } from "antd";
 import { firestore } from "firebase";
 
 import "./App.css";
-//hmm not working 
 
 const { Header, Footer, Content } = Layout;
 
