@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import { Layout, Input, Button } from "antd";
 
 //Import our Firestore module!!
-import { firestore } from "firebase";
+import firestore from "./Firestore";
 
 import "./App.css";
-//hmm not working 
 
 const { Header, Footer, Content } = Layout;
 
@@ -20,7 +19,7 @@ class App extends Component {
 
 async addTodo(evt) {
   //set flag to indicate the state of "Loading"
-  this.setState({addingTodo: true});
+ // this.setState({addingTodo: true});
   // Add a new todo from the value of input - not sure what that means
   await firestore.CollectionReference("todos").add({
     Content: this.state.pendingTodo,
@@ -55,7 +54,7 @@ render() {
           onClick={this.addTodo}
           loading={this.state.addingTodo}
           >
-            Add Todo
+            Add To do's
           </Button>
          </Content>
           <Footer className="App-Footer">&copy; Frustrated Incorporated</Footer>
